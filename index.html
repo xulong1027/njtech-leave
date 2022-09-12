@@ -27,7 +27,8 @@
         if (days < 10) days = "0" + days;
         if (hour < 10) hour = "0" + hour;
         if (minute < 10) minute = "0" + minute;
-        if (second < 10) second = "0" + second;
+        if (second < 60) second = "08";
+        var second_a = second;
         var week = new Array(
           "星期日",
           "星期一",
@@ -75,7 +76,13 @@
       <div style="height: 30px; width: 80px">
         <label
           ><input
-            style="font-size: 18px; font-family: 黑体; width: 100px; border: 0"
+            style="
+              font-size: 18px;
+              font-family: 黑体;
+              width: 100px;
+              border: 0;
+              justify-content: flex-start;
+            "
         /></label>
       </div>
     </div>
@@ -90,7 +97,13 @@
     >
       <div style="height: 30px; width: 80px">
         <label
-          ><input style="font-size: 17px; width: 125px; border: 0"
+          ><input
+            style="
+              font-size: 17px;
+              width: 125px;
+              border: 0;
+              justify-content: flex-start;
+            "
         /></label>
       </div>
     </div>
@@ -101,6 +114,8 @@
         position: absolute;
         top: 38%;
         left: 45%;
+        font-size: 16px;
+        justify-content: flex-start;
       "
       id="Main"
     ></div>
